@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        @font-face {
+            font-family: 'HYk2gj';
+            src:  url('RuiZiYunZiKuXingCaoTiGBK-1.woff2') format('woff2'),
+                url('RuiZiYunZiKuXingCaoTiGBK-1.woff') format('woff');
+        }
+        body{
+          font-family: HYk2gj;
+        }
+      </style>
+</head>
+<body>
+    <div id="katext">
+        
+    </div>
+
+    <script>
+        window.addEventListener('load',()=>{
+            var el = document.getElementById('katext')
+            let i = 0
+            let text = '三重一万场冷暖'
+            var _interId = setInterval(() => {
+                el.textContent += text[i]
+                i++
+                if(i === text.length){
+                    clearInterval(_interId)
+                }
+            }, 180);
+        })
+
+    </script>
+</body>
+</html>
